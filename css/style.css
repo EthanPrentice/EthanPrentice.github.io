@@ -113,7 +113,7 @@ header {
   padding-bottom: 0;
   margin-bottom: 0;
   height: 35px;
-  width: 100vw;
+  width: 100%;
 }
 
 header nav {
