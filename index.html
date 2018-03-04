@@ -11,39 +11,12 @@
     <title>Ethan Prentice</title>
     
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./js/main.js"></script>
   </head>
   
   <body>
-   
-    <script>
-      function fadeIn(element) {
-        var op = 0.1;  // initial opacity
-        element.style.display = 'block';
-        var timer = setInterval(function () {
-            if (op >= 1){
-                clearInterval(timer);
-            }
-            element.style.opacity = op;
-            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-            op += op * 0.1;
-        }, 10);
-      } 
-
-      function fadeInBoxes() {
-        var elemArray = document.getElementsByClassName("box");
-
-        for (var i = 0; i < elemArray.length; i++) {
-          fadeIn(elemArray[i]);
-        }
-
-      }
-
-      window.onload = function() {
-        alert("HEY");
-        fadeInBoxes();
-      };
-    </script>
-    
+  
     <header>
       <div class="container">
         <a href="index.html">
@@ -72,8 +45,10 @@
       
       <div class="container" id="boxes">
        
-        <div class="box">
-          <img src="imgs/main/smart_mirror.png">
+        <div class="box" onClick="fadeInBoxes();">
+          <a href="https://github.com/EthanPrentice/SmartMirror">
+            <img src="imgs/main/smart_mirror.png">
+          </a>
           <h3 class="box_title">Smart Mirror (WIP)</h3>
           <p>Personal assistant with companion Android application running on a Raspberry Pi 3</p>
         </div>
@@ -85,7 +60,9 @@
         </div>
         
         <div class="box">
-          <img src="imgs/main/lecture_downloader.png">
+          <a href="https://github.com/EthanPrentice/LectureFetcher-BUSI1001">
+            <img src="imgs/main/lecture_downloader.png">
+          </a>
           <h3 class="box_title">Lecture Downloader</h3>
           <p>Used to download lectures off of CULearn for offline viewing.</p>
         </div>
