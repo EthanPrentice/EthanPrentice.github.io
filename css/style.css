@@ -2,6 +2,7 @@
   --dark-color: #222222;
   --theme-color: #333333;
   --accent-color: #1f8f80;
+  --light-color: #e1e1e1;
 }
 
 
@@ -11,14 +12,19 @@ body {
   line-height: 1.5;
   padding: 0;
   margin: 0;
-  background-color: #ececec;
+  background-color: var(--light-color);
 }
 
-/* Global */
+
+/* Globals */
 .container {
   width: 80%;
   margin: auto;
   overflow: hidden;
+}
+
+.highlight {
+  color: var(--accent-color);
 }
 
 ul {
@@ -26,11 +32,88 @@ ul {
   padding: 0;
 }
 
+/* Main */
+#main_section {
+  width: 100%;
+  height: 100vh;
+  
+  background-image: url("../imgs/main/bg_image.png");
+}
+
+#main_section .container {
+  height: 0;
+  width: 80%;
+  padding-top: 40%;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  margin: auto;
+  
+  text-align: center;
+  background: rgba(51, 51, 51, 0.9);
+  color: var(--light-color);
+}
+
+#main_section .container p{
+  width: 100%;
+  
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  font-size: 3.5vw;
+  
+  margin-bottom: 10px;
+}
+
+#main_section .container #circle_portrait {
+  height: 40%;
+  padding-top: 10px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#dwn_arrow {
+  height: 5%;
+  
+  opacity: 0;
+  
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Prevents user from dragging image around */
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#dwn_arrow:hover {
+  content :url("../imgs/main/arrow_hover.png");
+}
+
+
 /* Header */
 header {
-  background: var(--dark-color);
+  background: rgba(34, 34, 34, 0.95);
   padding-top: 5px;
-  min-height: 30px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  height: 35px;
+  width: 100vw;
 }
 
 header nav {
@@ -39,7 +122,7 @@ header nav {
 }
 
 header a {
-  color: #87a29e;
+  color: var(--light-color);
   text-decoration: none;
   text-transform: lowercase;
   font-size: 20px;
@@ -56,120 +139,49 @@ header ul {
 }
 
 header .current a, header .current a:hover {
-  color: #9cb9b5;
-  border-bottom: 3px solid #9cb9b5;
+  color: var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
 }
 
 header a:hover {
-  color: #9cb9b5;
-}
-
-#logo_header {
-  height: 30px;
-  padding-right: 35px;
-  float:left;
-}
-
-/* Title Section */
-#title_section {
-  position: relative;
-  padding: 0px;
-  margin: 0px;
-  height: 400px;
-  text-align: center;
-  background-color: var(--theme-color);
-}
-
-#title_section #title_container {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#title_container #title {
-  margin-top: 0px;
-  margin-bottom: -20px;
-  padding: 0;
-  color: #ececec;
-  font-size: 80px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-#title_container #subtitle {
-  margin: 0;
-  padding: 0;
   color: var(--accent-color);
-  font-size: 40px;
-}
-
-
-/* Projects */
-#project_title {
-  margin-bottom: 25px;
-  text-align: center;
-  color: var(--theme-color);
-  font-size: 60px;
-  font-weight: bold;
-}
-
-#boxes {
-  margin-top: 0px;
-}
-
-#boxes .box {
-  opacity: 0;
-  float: left;
-  text-align: center;
-  min-width: 220px;
-  width: 30%;
-  padding: calc(5%/3);
-}
-
-#boxes .box img {
-  width: 100%;
-}
-
-.box img:hover {
-  opacity: 0.85;
 }
 
 
 /* About Me */
-#personal_info_sec {
-  margin-top: 60px;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  padding: 0;
-  background: var(--theme-color);
+#about_me_section {
+  width: 100%;
 }
 
-#about_me_img {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 20%;
+#about_me_section .container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#about_me_section h1 {
+  display:inline-block;
+  text-align: center;
+  opacity: 0;
+  padding-bottom: 0;
+  font-size: 0px;
+  border-bottom: 4px solid var(--theme-color);
+}
+
+#about_me_info {
+  width: 80%;
+  overflow: visible;
+}
+
+#carleton_logo img {
   float: left;
-  border: 2px solid #9cb9b5;
+  width: 10%;
+  transform: translateX(-50%);
+  padding-right: 0px;
 }
 
-#about_me_pg {
-  float: right;
-  margin-left: 0px;
-  padding-left: 20px;
-  width: 70%;
+#about_me_info p {
   font-size: 25px;
-  color: #9cb9b5;
 }
-
-#personal_info_sec #angle_accent {
-  float: right;
-  transform: translateY(-100%);
-}
-
-
-
 
 
 

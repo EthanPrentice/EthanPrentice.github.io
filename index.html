@@ -10,67 +10,117 @@
     <meta name="author" content="Ethan Prentice">
     <title>Ethan Prentice</title>
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./js/jquery.visible.min.js"></script>
     <script src="./js/main.js"></script>
   </head>
   
   <body>
-  
-    <header>
+   
+   <!-- Main Info / Landing Page -->
+    <section id="main_section">
+      <div class="container" id="main_container">
+       
+       <div>
+          <div>
+            <p>Hey, I'm <span class="highlight">Ethan Prentice</span>, <br>Student and Software Developer.</p>
+          </div>
+
+          <img src="./imgs/main/me_circle.png" id="circle_portrait">
+
+          <div>
+
+            <img src="./imgs/main/arrow.png" id="dwn_arrow">
+
+          </div>
+        
+        </div>
+      
+      </div>
+    </section>
+    
+    
+    <!-- Header -->
+    <header id="header">
       <div class="container">
-        <a href="index.html">
-          <img src="imgs/logo.png" id="logo_header">
-        </a>
         <navbar>
           <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="current" id="home_btn"><a href="index.html">Home</a></li>
+            <li id="about_btn"><a href="about.html">About</a></li>
+            <li id="project_btn"><a>Projects</a></li>
+            <li id="resume_btn"><a href="resume.html">Resume</a></li>
+            <li id="contact_btn"><a href="contact.html">Contact</a></li>
           </ul>
         </navbar>
       </div>
     </header>
-    
-    <section id="title_section">
-      <div class="container" id="title_container">
-        <h1 id="title">Ethan Prentice</h1>
-        <p id="subtitle">Student &amp; Software Developer</p>
-      </div>
-    </section>
-    
-    <section id="project_section">
-      <h1 id="project_title">Projects</h1>
-      
-      <div class="container" id="boxes">
-       
-        <div class="box" onClick="fadeInBoxes();">
-          <a href="https://github.com/EthanPrentice/SmartMirror">
-            <img src="imgs/main/smart_mirror.png">
-          </a>
-          <h3 class="box_title">Smart Mirror (WIP)</h3>
-          <p>Personal assistant with companion Android application running on a Raspberry Pi 3</p>
-        </div>
-        
-        <div class="box">
-          <img src="imgs/main/email_2_calendar.png">
-          <h3 class="box_title">Emails to Calendar</h3>
-          <p>Scrapes events from preformatted emails and uploads them to Google Calendar</p>
-        </div>
-        
-        <div class="box">
-          <a href="https://github.com/EthanPrentice/LectureFetcher-BUSI1001">
-            <img src="imgs/main/lecture_downloader.png">
-          </a>
-          <h3 class="box_title">Lecture Downloader</h3>
-          <p>Used to download lectures off of CULearn for offline viewing.</p>
-        </div>
-        
-      </div>
-    </section>
-    
-  </body>
+  
+  <!-- About Me -->
+    <section id="about_me_section">
 
+      <div class="container">
+
+        <h1 id="about_me_heading">About Me</h1>
+
+        <div class="container" id="about_me_info">
+
+          <img id="carleton_logo" src="./imgs/about_me/carleton_logo.png">
+          <p id="about_me_p">I’m currently at Carleton University doing an honours in <span class="highlight">Computer Science</span> specializing in <span class="highlight">Software Engineering</span> and double minoring in <span class="highlight">Business and Statistics</span>.  I enjoy programming in my spare time and work on personal projects to learn new languages, frameworks and develop whatever I find interesting.</p>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+    <!-- Projects -->
+    <section>
+
+      <div>
+
+        <p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </p>
+
+
+      </div>
+
+    </section>
+
+  </body>
 
 </html>
