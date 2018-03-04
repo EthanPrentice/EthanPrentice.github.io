@@ -9,22 +9,52 @@
     <meta name="keywords" content="portfolio, developer, software engineer, Ethan Prentice">
     <meta name="author" content="Ethan Prentice">
     <title>Ethan Prentice</title>
-    <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="stylesheet" href="css/style.css">
   </head>
   
   <body>
+   
+    <script>
+      function fadeIn(element) {
+        var op = 0.1;  // initial opacity
+        element.style.display = 'block';
+        var timer = setInterval(function () {
+            if (op >= 1){
+                clearInterval(timer);
+            }
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+            op += op * 0.1;
+        }, 10);
+      } 
+
+      function fadeInBoxes() {
+        var elemArray = document.getElementsByClassName("box");
+
+        for (var i = 0; i < elemArray.length; i++) {
+          fadeIn(elemArray[i]);
+        }
+
+      }
+
+      window.onload = function() {
+        alert("HEY");
+        fadeInBoxes();
+      };
+    </script>
     
     <header>
       <div class="container">
-        <a href="./index.html">
-          <img src="./imgs/logo.png" id="logo_header">
+        <a href="index.html">
+          <img src="imgs/logo.png" id="logo_header">
         </a>
         <navbar>
           <ul>
-            <li class="current"><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./resume.html">Resume</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </navbar>
       </div>
@@ -43,19 +73,19 @@
       <div class="container" id="boxes">
        
         <div class="box">
-          <img src="./imgs/main/smart_mirror.png">
+          <img src="imgs/main/smart_mirror.png">
           <h3 class="box_title">Smart Mirror (WIP)</h3>
           <p>Personal assistant with companion Android application running on a Raspberry Pi 3</p>
         </div>
         
         <div class="box">
-          <img src="./imgs/main/email_2_calendar.png">
+          <img src="imgs/main/email_2_calendar.png">
           <h3 class="box_title">Emails to Calendar</h3>
           <p>Scrapes events from preformatted emails and uploads them to Google Calendar</p>
         </div>
         
         <div class="box">
-          <img src="./imgs/main/lecture_downloader.png">
+          <img src="imgs/main/lecture_downloader.png">
           <h3 class="box_title">Lecture Downloader</h3>
           <p>Used to download lectures off of CULearn for offline viewing.</p>
         </div>
