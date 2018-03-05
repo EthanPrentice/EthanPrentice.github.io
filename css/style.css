@@ -140,10 +140,15 @@ header ul {
   display: inline;
 }
 
-header .current a, header .current a:hover {
+.current {
   color: var(--accent-color);
-  border-bottom: 3px solid var(--accent-color);
 }
+
+
+header .current a, header .current a:hover {
+  color: inherit;
+}
+
 
 header a:hover {
   color: var(--accent-color);
@@ -153,6 +158,7 @@ header a:hover {
 /* About Me */
 #about_section {
   width: 100%;
+  margin: 0;
 }
 
 #about_section #about_container {
@@ -224,6 +230,27 @@ header a:hover {
   text-align: center;
   width: 8.5%;
   padding: 1.75%;
+}
+
+
+/* Projects */
+#projects_section {
+  width: 100%;
+  background: #d6d6d6;
+}
+
+#projects_section #projects_container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#projects_section .heading {
+  display:inline-block;
+  text-align: center;
+  opacity: 0;
+  padding-bottom: 0;
+  font-size: 0px;
+  border-bottom: 4px solid var(--theme-color);
 }
 
 
