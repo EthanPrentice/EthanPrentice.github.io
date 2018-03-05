@@ -129,6 +129,7 @@ header a {
 }
 
 header li {
+  overflow: hidden;
   float: left;
   display: inline;
   padding: 0 20px 0 20px;
@@ -136,6 +137,7 @@ header li {
 
 header ul {
   float: left;
+  display: inline;
 }
 
 header .current a, header .current a:hover {
@@ -149,16 +151,16 @@ header a:hover {
 
 
 /* About Me */
-#about_me_section {
+#about_section {
   width: 100%;
 }
 
-#about_me_section .container {
+#about_section #about_container {
   text-align: center;
   margin-top: 30px;
 }
 
-#about_me_section h1 {
+#about_section .heading {
   display:inline-block;
   text-align: center;
   opacity: 0;
@@ -167,20 +169,61 @@ header a:hover {
   border-bottom: 4px solid var(--theme-color);
 }
 
-#about_me_info {
+#about_info {
   width: 80%;
   overflow: visible;
 }
 
-#carleton_logo img {
+#about_image_div {
   float: left;
   width: 10%;
+  opacity: 0;
+  left: 50%;
   transform: translateX(-50%);
-  padding-right: 0px;
+  padding: 5px;
+  background: #123123;
 }
 
-#about_me_info p {
+#carleton_logo{
+  width: 0;
+  opacity: 0;
+}
+
+#about_info p {
   font-size: 25px;
+}
+
+
+/* Skills */
+
+.skills_div {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.skills_div div {
+  margin: 0 auto;
+  overflow: hidden;
+  
+  float: none;
+}
+
+.skills_div h3 {
+  font-size: 25px;
+}
+
+.skill {
+  text-align: center;
+  width: 8%;
+  padding: 2%;
+}
+
+.skill:hover {
+  text-align: center;
+  width: 8.5%;
+  padding: 1.75%;
 }
 
 
